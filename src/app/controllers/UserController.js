@@ -70,7 +70,7 @@ class UserController {
 
     // verifico se a senha antiga foi digitada e se ela é diferente da senha atual
     if (oldPassword && !(await user.checkPassword(oldPassword))) {
-      return res.status(401).json({ error: 'Password does not match' });
+      return res.status(401).json({ error: 'Password does not match!' });
     }
 
     // se tudo der certo, eu pego os dados do body e dou um update no usuario
