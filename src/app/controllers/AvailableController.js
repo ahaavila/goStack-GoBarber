@@ -25,7 +25,7 @@ class AvailableController {
     const searchDate = Number(date);
 
     // Busco todos os agendamentos que existem na data informada pelo Front
-    const appointments = await Appointment.findAll({
+    const appointments = await Appointment.finddAll({
       where: {
         provider_id: req.params.providerId,
         canceled_at: null,
